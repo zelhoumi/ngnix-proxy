@@ -19,8 +19,7 @@ services:
     container_name: custom-auth-service
     environment:
       #Admin Credentials
-      KC_HOSTNAME_STRICT: 'false'
-      KC_HOSTNAME_STRICT_HTTPS: 'false'
+ 
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: MyKeycloak493
       KEYCLOAK_USER: admin
@@ -30,7 +29,6 @@ services:
       KC_DB_PASSWORD: My863Keycloak
       KC_HEALTH_ENABLED: 'true'
       KC_METRICS_ENABLED: 'true'
-      PROXY_ADDRESS_FORWARDING: "true"
     command:
       - "-v start --optimized"
     ports:
