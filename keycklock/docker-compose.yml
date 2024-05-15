@@ -27,7 +27,7 @@ services:
       KC_DB_URL_DATABASE: keycloak
       KC_DB_PASSWORD: admin
       KC_DB_USERNAME: admin
-      
+      KC_HTTPS_REQUIRED: 'false'
       KC_HTTP_ENABLED: 'true'
     
       KC_HOSTNAME_STRICT: 'false'
