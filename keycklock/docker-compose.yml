@@ -19,7 +19,7 @@ services:
   
   keycloak:
     image: quay.io/keycloak/keycloak:24.0.4
-    command: start-dev
+    command: start-dev sslRequired=NONE
     environment:
       #Admin Credentials
       KC_DB: postgres
