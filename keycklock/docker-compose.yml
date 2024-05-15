@@ -28,7 +28,7 @@ services:
       KC_DB_PASSWORD: admin
       KC_DB_USERNAME: admin
       KEYCLOAK_HTTP_SSL_REQUIRED: none
-
+      KC_HOSTNAME_STRICT_HTTPS: "false"
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
       KEYCLOAK_DB_SHCHEMA: public
