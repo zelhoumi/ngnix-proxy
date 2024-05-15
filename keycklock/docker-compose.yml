@@ -30,7 +30,7 @@ services:
       KC_DB_PASSWORD: My863Keycloak
       KC_HEALTH_ENABLED: 'true'
       KC_METRICS_ENABLED: 'true'
-      KC_HOSTNAME: localhost
+      KC_HOSTNAME: '149.56.142.116'
       PROXY_ADDRESS_FORWARDING: "true"
     command:
       - "-v start --optimized"
