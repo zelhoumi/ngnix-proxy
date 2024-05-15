@@ -27,12 +27,13 @@ services:
       KC_DB_URL_DATABASE: keycloak
       KC_DB_PASSWORD: admin
       KC_DB_USERNAME: admin
-      KC_HTTP_ENABLED: true
+      
+      KC_HTTP_ENABLED: 1
       KC_PROXY: passthrough
       KC_HOSTNAME: localhost
       KC_HOSTNAME_PORT: 80
-      KC_HOSTNAME_STRICT: false
-      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HOSTNAME_STRICT: 0
+      KC_HOSTNAME_STRICT_HTTPS: 0
       KC_HTTP_RELATIVE_PATH: /auth
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
