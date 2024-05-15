@@ -39,7 +39,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - "8080:8080"
+      - 8080:8080
     networks:
       - keycloak_network
 
