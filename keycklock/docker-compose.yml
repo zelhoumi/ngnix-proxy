@@ -32,7 +32,7 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: admin
       KEYCLOAK_DB_SHCHEMA: public
     ports:
-      - 80:80
+      - 80:8080
     depends_on:
       - postgres
     networks:
