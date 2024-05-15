@@ -27,12 +27,8 @@ services:
       KC_DB_URL_DATABASE: keycloak
       KC_DB_PASSWORD: admin
       KC_DB_USERNAME: admin
-      KC_HTTPS_REQUIRED: 'false'
-      KC_HTTP_ENABLED: 'true'
-      KEYCLOAK_HTTP_SSL_REQUIRED: none
-      KC_HOSTNAME_STRICT: 'false'
-      KC_HOSTNAME_STRICT_HTTPS: 'false'
-      KC_HOSTNAME: localhost
+   
+      KC_HOSTNAME: keycloak.vexpress.ma
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
     
