@@ -1,29 +1,41 @@
-version: '3.3'
+version: '3'
+
+volumes:
+  keycloak-db-data:
+    driver: local
 
 services:
   postgres:
-    image: postgres:13
+    image: postgres:13.7
+    container_name: postgres
+    volumes:
+      - keycloak-db-data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: keycloak
-      POSTGRES_USER: keycloak
-      POSTGRES_PASSWORD: password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
+      POSTGRES_USER: my_keycloak
+      POSTGRES_PASSWORD: My863Keycloak
   keycloak:
-    image: quay.io/keycloak/keycloak:latest
+    build: .
+    container_name: custom-auth-service
     environment:
-      DB_VENDOR: POSTGRES
-      DB_ADDR: postgres
-      DB_DATABASE: keycloak
-      DB_USER: keycloak
-      DB_PASSWORD: password
+      #Admin Credentials
+      KC_HOSTNAME_STRICT: 'false'
+      KC_HOSTNAME_STRICT_HTTPS: 'false'
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: MyKeycloak493
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_PASSWORD: MyKeycloak493
+      KC_DB_URL: 'jdbc:postgresql://postgres/keycloak'
+      KC_DB_USERNAME: my_keycloak
+      KC_DB_PASSWORD: My863Keycloak
+      KC_HEALTH_ENABLED: 'true'
+      KC_METRICS_ENABLED: 'true'
+      KC_HOSTNAME: localhost
+      PROXY_ADDRESS_FORWARDING: "true"
+    command:
+      - "-v start --optimized"
     ports:
+      - 8443:8443
       - 8080:8080
     depends_on:
       - postgres
-
-volumes:
-  postgres_data:
