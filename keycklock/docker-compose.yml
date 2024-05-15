@@ -35,7 +35,6 @@ services:
     command:
       - "-v start --optimized"
     ports:
-      - 8443:8443
       - 8080:8080
     depends_on:
       - postgres
