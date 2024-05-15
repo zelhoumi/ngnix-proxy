@@ -28,7 +28,7 @@ services:
       KC_DB_PASSWORD: admin
       KC_DB_USERNAME: admin
       
-      KC_HTTP_ENABLED: 1
+      KC_HTTP_ENABLED: 'true'
       KC_PROXY: passthrough
       KC_HOSTNAME: localhost
       KC_HOSTNAME_PORT: 80
